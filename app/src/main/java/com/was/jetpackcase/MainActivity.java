@@ -11,6 +11,7 @@ import com.was.jetpackcase.ui.DataBindingAdapterActivity;
 import com.was.jetpackcase.ui.DataBindingQuickActivity;
 import com.was.jetpackcase.ui.RoomActivity;
 import com.was.jetpackcase.ui.ViewModelActivity;
+import com.was.jetpackcase.ui.ViewModelFragmentActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickViewModel(View view) {
         Intent intent = new Intent(this, ViewModelActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickViewFragmentModel(View view) {
+        Intent intent = new Intent(this, ViewModelFragmentActivity.class);
         startActivity(intent);
     }
 

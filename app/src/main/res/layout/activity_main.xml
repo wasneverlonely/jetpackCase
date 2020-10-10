@@ -31,8 +31,14 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:onClick="clickViewModel"
-        android:text="ViewModel" />
+        android:text="ViewModelActivity" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:onClick="clickViewFragmentModel"
+        android:text="ViewModelFragmentActivity" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="40dp"

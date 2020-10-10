@@ -2,7 +2,10 @@ package com.was.jetpackcase.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStore;
 
 import android.os.Bundle;
 import android.view.View;
@@ -19,14 +22,13 @@ import com.was.jetpackcase.utils.DataUtils;
 public class ViewModelActivity extends AppCompatActivity {
 
     ActivityViewModelBinding binding;
-    UserViewModel viewModel;
+    UserViewModel viewModel = new UserViewModel();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model);
-
-        viewModel = new UserViewModel();
 
         viewModel.getUser().observe(this, new Observer<UserBean>() {
             @Override
