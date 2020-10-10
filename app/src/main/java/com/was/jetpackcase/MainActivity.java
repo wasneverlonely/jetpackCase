@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.was.jetpackcase.ui.DataBindingActivity;
+import com.was.jetpackcase.ui.DataBindingAdapterActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void clickDataBinding(View view) {
+        Intent intent = new Intent(this, DataBindingActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickDataBindingAdapter(View view) {
+        Intent intent = new Intent(this, DataBindingAdapterActivity.class);
+        startActivity(intent);
+    }
 
     public void clickViewModel(View view) {
 //        Intent intent = new Intent(this, ViewModelActivity.class);
@@ -28,8 +38,5 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
     }
 
-    public void clickDataBinding(View view) {
-        Intent intent = new Intent(this, DataBindingActivity.class);
-        startActivity(intent);
-    }
+
 }

@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
-            name="data"
-            type="com.was.jetpackcase.bean.DataBean" />
+            name="user"
+            type="com.was.jetpackcase.bean.UserBean" />
+
+        <variable
+            name="click"
+            type="com.was.jetpackcase.ui.DataBindingActivity.ClickProxy" />
     </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
         android:orientation="vertical"
         tools:context=".ui.DataBindingActivity">
 
@@ -21,7 +26,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@{data.name}" />
+            android:text="@{`姓名 : ` + user.name }" />
+
+        <TextView
+            android:id="@+id/tvSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="@{`性别 :` +(user.sex ==1?`男`:`女`)}" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->click.click()}"
+            android:text="李四变成张三"></Button>
 
     </LinearLayout>
 </layout>
