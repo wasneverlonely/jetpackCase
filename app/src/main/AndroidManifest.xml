@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.DataBindingAdapterActivity"></activity>
+        <activity android:name=".ui.RoomActivity"></activity>
+        <activity android:name=".ui.LifecyclesActivity" />
+        <activity android:name=".ui.LiveDataActivity" />
+        <activity android:name=".ui.ViewModelActivity" />
+        <activity android:name=".ui.DataBindingQuickActivity" />
+        <activity android:name=".ui.DataBindingAdapterActivity" />
         <activity android:name=".ui.DatabingAdapterActivity" />
         <activity android:name=".ui.DataBindingActivity" />
         <activity android:name=".MainActivity">

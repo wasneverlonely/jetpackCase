@@ -11,6 +11,7 @@ import com.was.jetpackcase.R;
 import com.was.jetpackcase.adapter.DataBindingAdapter;
 import com.was.jetpackcase.bean.UserBean;
 import com.was.jetpackcase.databinding.ActivityDatabindingAdapterBinding;
+import com.was.jetpackcase.utils.DataUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class DataBindingAdapterActivity extends AppCompatActivity {
     DataBindingAdapter adapter;
 
     private void initView() {
-        adapter = new DataBindingAdapter(initUserData());
+        adapter = new DataBindingAdapter(DataUtils.getUserDataList());
         viewDataBinding.recyclerview.setAdapter(adapter);
         adapter.setOnItemOnClickListener(new DataBindingAdapter.OnItemOnClickListener() {
             @Override
@@ -40,19 +41,6 @@ public class DataBindingAdapterActivity extends AppCompatActivity {
         });
     }
 
-    //初始化测试数据
-    private List<UserBean> initUserData() {
-        List<UserBean> list = new ArrayList<>();
-        for (int i = 1; i < 11; i++) {
-            UserBean userBean = new UserBean();
-            userBean.setId(i);
-            userBean.setName("名字" + i);
-            userBean.setSex(i % 2 == 0 ? 1 : 0);
-            userBean.setNo("1234932874" + i);
-            list.add(userBean);
-        }
-        return list;
-    }
 
     public class ClickProxy {
         public void clickAdd() {

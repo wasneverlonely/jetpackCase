@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.was.jetpackcase.ui.DataBindingActivity;
 import com.was.jetpackcase.ui.DataBindingAdapterActivity;
+import com.was.jetpackcase.ui.DataBindingQuickActivity;
+import com.was.jetpackcase.ui.RoomActivity;
+import com.was.jetpackcase.ui.ViewModelActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,14 +31,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void clickViewModel(View view) {
-//        Intent intent = new Intent(this, ViewModelActivity.class);
-//        startActivity(intent);
+    public void clickDataBindingQuick(View view) {
+        Intent intent = new Intent(this, DataBindingQuickActivity.class);
+        startActivity(intent);
     }
 
-    public void clickLiveData(View view) {
-//        Intent intent = new Intent(this, LiveDataActivity.class);
-//        startActivity(intent);
+
+    public void clickViewModel(View view) {
+        Intent intent = new Intent(this, ViewModelActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickRoom(View view) {
+        Intent intent = new Intent(this, RoomActivity.class);
+        startActivity(intent);
     }
 
 

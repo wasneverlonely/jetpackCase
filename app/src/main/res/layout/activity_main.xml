@@ -19,7 +19,12 @@
         android:layout_marginTop="20dp"
         android:onClick="clickDataBindingAdapter"
         android:text="DataBindingAdapter" />
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:onClick="clickDataBindingQuick"
+        android:text="DataBindingQuick" />
 
     <Button
         android:layout_width="match_parent"
@@ -32,8 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:onClick="clickLiveData"
-        android:text="LiveData" />
+        android:onClick="clickRoom"
+        android:text="Room" />
 
 
 </LinearLayout>
