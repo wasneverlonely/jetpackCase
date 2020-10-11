@@ -12,19 +12,22 @@ import com.was.jetpackcase.databinding.ActivityDataBindingBinding;
 public class DataBindingActivity extends AppCompatActivity {
 
     private UserBean user;
+    ActivityDataBindingBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+        binding.setClick(new ClickProxy());
         user = new UserBean(1, "李四", 1, "1232323");
         binding.setUser(user);
     }
 
     public class ClickProxy {
         public void click() {
-//            user.setName("张三");
+            user = new UserBean(2, "张三", 0, "1232323");
+            binding.setUser(user);
         }
     }
 }

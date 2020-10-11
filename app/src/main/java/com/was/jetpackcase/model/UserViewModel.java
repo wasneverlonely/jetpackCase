@@ -2,7 +2,6 @@ package com.was.jetpackcase.model;
 
 import android.util.Log;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -27,14 +26,9 @@ public class UserViewModel extends ViewModel {
         }.start();
     }
 
-    public LiveData getDatas() {
-        return userLiveData;
-    }
-
     public void updateUser(String name) {
         userLiveData.setValue(DataUtils.getUserData(name));
     }
-
 
     @Override
     protected void onCleared() {

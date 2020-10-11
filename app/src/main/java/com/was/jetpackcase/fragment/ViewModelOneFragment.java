@@ -32,7 +32,7 @@ public class ViewModelOneFragment extends Fragment {
         ViewModelProvider.Factory factory = new ViewModelProvider.AndroidViewModelFactory(getActivity().getApplication());
         UserViewModel viewModel = new ViewModelProvider(getActivity(), factory).get(UserViewModel.class);
 
-        viewModel.getDatas().observe(getActivity(), new Observer<UserBean>() {
+        viewModel.getUser().observe(getActivity(), new Observer<UserBean>() {
             @Override
             public void onChanged(UserBean userBean) {
                 binding.tvContent.setText(userBean.getName());

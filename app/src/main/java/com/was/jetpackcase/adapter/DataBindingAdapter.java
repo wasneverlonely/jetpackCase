@@ -46,16 +46,19 @@ public class DataBindingAdapter extends RecyclerView.Adapter<DataBindingAdapterV
         ItemDatabindingAdapterBinding itemDatabinding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_databinding_adapter, parent, false);
         itemDatabinding.getRoot().setOnClickListener(this);
         return new DataBindingAdapterViewHolder(itemDatabinding);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull DataBindingAdapterViewHolder holder, int position) {
+
         ItemDatabindingAdapterBinding itemDatabinding = holder.getItemDatabinding();
         UserBean user = data.get(position);
         itemDatabinding.setVariable(BR.user, user);
         // 将position 保存在itemView的Tag中,以便点击时获取
         itemDatabinding.getRoot().setTag(position);
         itemDatabinding.executePendingBindings();
+
     }
 
     @Override
