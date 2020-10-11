@@ -2,6 +2,7 @@ package com.was.jetpackcase.model;
 
 import android.util.Log;
 
+import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -9,6 +10,8 @@ import com.was.jetpackcase.bean.UserBean;
 import com.was.jetpackcase.utils.DataUtils;
 
 public class UserViewModel extends ViewModel {
+
+    public final ObservableField<String> name = new ObservableField<>();
 
     public MutableLiveData<UserBean> userLiveData = new MutableLiveData<>();
 
@@ -36,4 +39,7 @@ public class UserViewModel extends ViewModel {
         Log.d(UserViewModel.class.getSimpleName(), "===========onCleared()");
     }
 
+    {
+        name.set("我是初始化名字");
+    }
 }

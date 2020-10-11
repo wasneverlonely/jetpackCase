@@ -23,6 +23,7 @@ public class ViewModelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model);
+        binding.setUser(viewModel);
 
         viewModel.getUser().observe(this, new Observer<UserBean>() {
             @Override
@@ -34,5 +35,7 @@ public class ViewModelActivity extends AppCompatActivity {
 
     public void clickUpdate(View view) {
         viewModel.updateUser("我的名字");
+
+        viewModel.name.set("我是修改过的名字");
     }
 }
