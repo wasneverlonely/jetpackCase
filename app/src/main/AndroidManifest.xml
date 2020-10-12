@@ -18,7 +18,6 @@
         <activity android:name=".ui.ViewModelActivity" />
         <activity android:name=".ui.DataBindingQuickActivity" />
         <activity android:name=".ui.DataBindingAdapterActivity" />
-        <activity android:name=".ui.DatabingAdapterActivity" />
         <activity android:name=".ui.DataBindingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
